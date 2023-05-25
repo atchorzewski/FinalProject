@@ -1,4 +1,4 @@
-package pl.coderslab.finalproject.Shop;
+package pl.coderslab.finalproject.Shop.Entity;
 
 import lombok.Data;
 
