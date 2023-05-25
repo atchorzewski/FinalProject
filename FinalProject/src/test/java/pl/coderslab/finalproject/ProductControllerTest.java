@@ -2,8 +2,6 @@ package pl.coderslab.finalproject;
 
 
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -11,11 +9,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import pl.coderslab.finalproject.Shop.Controller.ProductController;
 import pl.coderslab.finalproject.Shop.DTO.DTOConverter;
 import pl.coderslab.finalproject.Shop.DTO.ProductDTO;
-import pl.coderslab.finalproject.Shop.Product;
+import pl.coderslab.finalproject.Shop.Entity.Product;
 import pl.coderslab.finalproject.Shop.Service.ProductService;
 
-import java.util.Arrays;
-import java.util.List;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -36,7 +32,7 @@ public class ProductControllerTest {
         Product product = new Product();
         product.setId(1L);
         product.setName("Product 1");
-        product.setPrice(10.99);
+
 
         ProductDTO productDTO = new ProductDTO();
         productDTO.setId(1L);
