@@ -1,19 +1,20 @@
 package pl.coderslab.finalproject.Shop;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "orders")
+@Data
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    private Customer customer;
+    private String orderNumber;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private List<OrderItem> items;
-
-    // Getters and setters
+    @OneToMany(mappedBy = "order")
+    private List<OrderItem> orderItems;
 }
