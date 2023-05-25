@@ -5,14 +5,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.finalproject.Shop.DTO.DTOConverter;
 import pl.coderslab.finalproject.Shop.DTO.ProductDTO;
-import pl.coderslab.finalproject.Shop.Product;
+import pl.coderslab.finalproject.Shop.Entity.Product;
 import pl.coderslab.finalproject.Shop.Service.ProductService;
 import javax.validation.Valid;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import java.util.List;
 
 @RestController
 @RequestMapping("/products")
